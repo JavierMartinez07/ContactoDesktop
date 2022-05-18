@@ -27,7 +27,7 @@ namespace ContactoDesktop
             ButtonColumn.Text = "Eliminar";
             ButtonColumn.UseColumnTextForButtonValue = true;
             int columnIndex = 5;
-            if (tableData.Columns["Eliminar"] == null)
+            if (tableData.Columns["Opciones"] == null)
             {
                 tableData.Columns.Insert(columnIndex, ButtonColumn);
             }
@@ -47,7 +47,7 @@ namespace ContactoDesktop
 
         private void tableData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == tableData.Columns["Eliminar"].Index)
+            if (e.ColumnIndex == tableData.Columns["Opciones"].Index)
             {
                int indexRow =  tableData.CurrentCell.RowIndex;
                var model = tableData.Rows[indexRow].DataBoundItem as Contacto;
